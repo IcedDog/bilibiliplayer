@@ -375,7 +375,7 @@ class Playlist {
         if (this.player.config.watchlater && sIndex === this.sortlist.length - 1) {
             sIndex = 0;
         }
-        let next: IPageItem | void;
+        let next: IPageItem | void = void {};
         for (let i = sIndex; i < this.sortlist.length; i++) {
             if (bvidPlaying && this.sortlist[i].bvid !== bvidPlaying) {
                 next = this.sortlist[i];

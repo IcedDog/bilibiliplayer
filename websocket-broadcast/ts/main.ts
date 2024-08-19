@@ -96,7 +96,7 @@ export default class Main {
             : 'ws://broadcast.chat.bilibili.com:7822/sub';
     }
     private initialize(url: string) {
-        const cWebSocket = 'MozWebSocket' in window ? window.MozWebSocket : window.WebSocket,
+        const cWebSocket = 'MozWebSocket' in window ? window.MozWebSocket : WebSocket,
             options = this.options;
         try {
             this.ws = new cWebSocket!(url);

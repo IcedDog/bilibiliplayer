@@ -76,7 +76,7 @@ onUpdate(text: IRenderExtInterface, time: number): boolean {
         if (text.isHover) {
             return true;
         }
-        if (text.end < time) {
+    if (!text.paused && text.rest < (+new Date() - text.pauseTime) / 1000) {
             return false;
         } else {
             text._x = text.x;
@@ -104,7 +104,7 @@ onUpdate(text: IRenderExtInterface, time: number): boolean {
         if (text.isHover) {
             return true;
         }
-        if (text.end < time) {
+    if (!text.paused && text.rest < (+new Date() - text.pauseTime) / 1000) {
             return false;
         } else {
             text._x = text.x;

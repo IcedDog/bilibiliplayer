@@ -336,12 +336,12 @@ class PartManager {
         let p = config.p;
         const player = this.player;
         const data = this.parts;
-        let cid: number | false | void;
-        let aid: number | false | void;
-        let bvid: string | false | void;
+        let cid: number | false | void = false;
+        let aid: number | false | void = false;
+        let bvid: string | false | void = false;
         let index: number;
-        let episodeId: number | void;
-        let isPremiere: number | void;
+        let episodeId: number | void = void {};
+        let isPremiere: number | void = void {};
         let litsItem: any;
         const seasonType = player.config.seasonType;
         if (!data || !data.length || (data.length < 2 && !player.config.listLoop)) {
